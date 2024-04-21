@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internship Report</title>
+  <!-- Load DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+</head>
+<body>
+  <h1>IT Department Students Internship Report:</h1>
+  <table id="dataTable" class="display">
+    <thead>
+      <tr>
+        <th>Roll Number</th>
+        <th>Semester Number</th>
+        <th>Internship Status</th>
+        <th>Internship Info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table body will be populated dynamically -->
+    </tbody>
+  </table>
+
+  <!-- Load jQuery and DataTables JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+  <script>
+    // This function will be called when the page is loaded
+    $(document).ready(function() {
+      // Fetch JSON data from the server
+      $.getJSON('/submissions.json', function(data) {
+        // Initialize DataTable with JSON data
+        $('#dataTable').DataTable({
+          data: data, // JSON data
+          columns: [
+            { data: 'rollNumber' }, // Key for the first column
+            { data: 'semesterNumber' }, // Key for the second column
+            { data: 'internshipStatus' }, // Key for the third column
+            { data: 'internshipInfo' } // Key for the fourth column
+          ]
+        });
+      });
+    });
+  </script>
+  <script src="viewadmin.js"></script>
+</body>
+</html>

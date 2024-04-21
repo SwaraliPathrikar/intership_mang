@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Form</title>
+  <link rel="stylesheet" type="text/css" href="fillnew.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="image.png" alt="Logo">
+    </div>
+  </nav>
+
+  <form id="studentForm" action="http://localhost:3000/submit-form" method="post">
+    <label for="rollNumber">Roll Number:</label><br>
+    <input type="text" id="rollNumber" name="rollNumber" required><br>
+    <label for="semesterNumber">Semester Number:</label><br>
+    <select id="semesterNumber" name="semesterNumber" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    </select><br>
+    <label for="internshipStatus">Internship Status:</label><br>
+    <select id="internshipStatus" name="internshipStatus">
+      <option value="no">No Internship</option>
+      <option value="yes">Yes</option>
+    </select><br>
+    <div id="internshipDescription" style="display:none;">
+      <label for="internshipInfo">Internship Description:</label><br>
+      <textarea id="internshipInfo" name="internshipInfo"></textarea><br>
+    </div>
+    <input type="submit" value="Submit the Information" style="background-color: #007bff; color: white; width:303px; padding:0.5rem">
+  </form>
+</body>
+</html>

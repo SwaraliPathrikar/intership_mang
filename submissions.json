@@ -1,0 +1,26 @@
+[
+  {
+    "rollNumber": "34",
+    "semesterNumber": "8",
+    "internshipStatus": "yes",
+    "internshipInfo": "I am doing internship at e and d enterprises as a tester.The duration is from DEC 2023 to June2024"
+  },
+  {
+    "rollNumber": "19",
+    "semesterNumber": "4",
+    "internshipStatus": "yes",
+    "internshipInfo": "hp enterprises"
+  },
+  {
+    "rollNumber": "64",
+    "semesterNumber": "3",
+    "internshipStatus": "yes",
+    "internshipInfo": "ytgfres"
+  },
+  {
+    "rollNumber": "67",
+    "semesterNumber": "4",
+    "internshipStatus": "no",
+    "internshipInfo": ""
+  }
+]
